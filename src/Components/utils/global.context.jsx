@@ -15,6 +15,7 @@ const themes = {
         form: 'form-dark',
         navlink: 'link-dark',
         button: 'button-dark',
+        buttonsubmit: 'button-dark',
         cardlink: 'a-card-dark'
       },
       ligth: {
@@ -26,6 +27,7 @@ const themes = {
         form: 'form-ligth',
         navlink: 'link-ligth',
         button: 'button-ligth',
+        buttonsubmit: 'button-ligth-submit',
         cardlink: 'a-card-ligth'
       }
     }
@@ -58,6 +60,10 @@ const favoriteReducer = (state, action) => {
   switch(action.type){
     case 'ADD_FAVORITE_DOCTOR':
       return [...state, action.payload]
+    case 'REMOVE_FAVORITE_DOCTOR':
+      state = state.filter(element => element.id !== action.payload.id)
+      localStorage.setItem('favorites', JSON.stringify(state))
+      return [...state]
     default:
       throw new Error
   }

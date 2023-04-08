@@ -33,6 +33,11 @@ nav{
   padding: 16px;
 }
 
+nav li img{
+  width: 200px;
+  margin: 0;
+}
+
 .nav-dark{
   background-color:  #444443;
   color: #FFFFFF;
@@ -232,15 +237,10 @@ tr:nth-child(even) {
 
 /*Important*/
 
-.img-card{
-  width: 100%;
-  border-radius: 100px 100px 100px 100px;
-}
-
 .button-ligth {
   background-color:  #000000;
   border: none;
-  color: #a7a75e;
+  color: #FFFFFF;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -248,6 +248,7 @@ tr:nth-child(even) {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .button-dark {
@@ -261,4 +262,15 @@ tr:nth-child(even) {
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.1);
+  margin: 0 0 4px;
+  padding: 6px 10px 4px;
+  width: 100%;
 }

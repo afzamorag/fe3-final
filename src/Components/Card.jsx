@@ -7,8 +7,12 @@ const Card = ({doctor, isFavorites}) => {
   const {themeState, apiState, apiDispatch, favoriteState, favoriteDispatch} = useContextGlobal()
 
   const addFav = () =>{
-    favoriteDispatch({type: 'ADD_FAVORITE_DOCTOR', payload: doctor})
-    alert('Doctor add successfull')
+    if (!favoriteState.find(element => element.id === doctor.id)){
+      favoriteDispatch({type: 'ADD_FAVORITE_DOCTOR', payload: doctor})
+      alert('Doctor add successfull')
+    }else{
+      alert('Doctor already exists')
+    }    
   }
 
   const remoteFav = () =>{
@@ -22,12 +26,12 @@ const Card = ({doctor, isFavorites}) => {
             <h3>{doctor.name}</h3>
             <h3>{doctor.username}</h3>
             <h3>{doctor.id}</h3>           
-          </Link>
+          </Link>     
         {
           isFavorites ? 
           <button onClick={remoteFav} className={themeState.button}>Remove fav ⭐</button> :
           <button onClick={addFav} className={themeState.button}>Add fav ⭐</button>
-        }                
+        }                           
     </div>
   );
 };

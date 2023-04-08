@@ -11,9 +11,8 @@ const changeTheme = () =>{
 }
   return (
     <nav className={themeState.nav}>
-      <ul className="menuItems">
-          <li><Link to="/" className={themeState.navlink}> Home </Link> </li>
-          <li><Link to="/details/:id" className={themeState.navlink}> DH Odonto </Link></li>
+      <ul className="menuItems">          
+          <li><Link to="/" className={themeState.navlink}> Home </Link> </li>          
           <li><Link to="/favorite" className={themeState.navlink}> Favoritos </Link> </li>
           <li><Link to="/contact" className={themeState.navlink}> Contact </Link></li>          
           

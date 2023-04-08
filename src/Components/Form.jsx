@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useContextGlobal } from "./utils/global.context";
 
 
 const Form = () => {
+  const {themeState} = useContextGlobal()
   const [info, setInfo] = useState({
     nombre: "",
     email: "",
@@ -39,7 +41,7 @@ const Form = () => {
           onChange={(e) => setInfo({ ...info, email: e.target.value })}
           placeholder="ingresa tú correo"
         />
-        <button type="submit" > Agregar </button>
+        <button type="submit" className="button-ligth"> Agregar </button>
       </form>
       {err && <p className="error-container">Por favor verifique su información nuevamente</p>}
       {show && <p>Gracias {info.nombre}, te contactaremos cuando antes vía mail</p>} 
