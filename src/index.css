@@ -12,8 +12,10 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: #000000;
+  color: #a7a75e;
   padding: 10px;
+  margin: 0px 0px 10px 0px;
   border: none;
   width: 100%;
   cursor: pointer;
@@ -25,20 +27,69 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  position: relative;
+  justify-content: center;
+  margin: 25px;  
+  padding: 16px;
+}
+
+.nav-dark{
+  background-color:  #444443;
+  color: #FFFFFF;
+}
+
+.nav-ligth{
+  background: #a7a75e;
+  color: #000000;
+}
+
+nav .menuItems {
+  list-style: none;
+  display: flex;
+}
+nav .menuItems li {
+  margin: 50px; 
+  margin-top: 0px; 
+  margin-bottom: 0px;    
+}
+
+nav .menuItems li .link-ligth {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;  
+  position: relative;
+  text-transform: uppercase;
+}
+
+nav .menuItems li .link-dark {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;  
+  position: relative;
+  text-transform: uppercase;
 }
 
 a{
   color: #000;
   text-decoration: none;
   margin: 5px;
+  text-align: center;
   cursor: pointer;
 }
+
+.a-card-ligth{
+  color: #000000;  
+}
+
+.a-card-dark{
+  color: #FFFFFF; 
+}
+
 a:hover{
-  color: rgb(136, 136, 136);
-} 
+  color: rgb(120, 120, 120);
+}
 
 footer {
   display: flex;
@@ -46,10 +97,55 @@ footer {
   text-align: center;
   padding: 2rem;
   position: relative;
-  bottom: 0;
-  width: 90%;
+  bottom: 0;  
   height: 40px;
-  margin-top: 2rem;
+  margin-top: 2rem;  
+}
+
+.footer-ligth {
+  background: #a7a75e;
+  color: #000000;
+  font-weight: 600;    
+}
+
+.footer-dark {
+  background-color:  #444443;
+  color: #FFFFFF;
+  font-weight: 600; 
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
+a.tiktok{
+  color: #FE2C55;
+}
+
+a.wp{
+  color: #075E54;
 }
 
 footer > img{
@@ -70,14 +166,31 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card-ligth{
   display: flex;
+  background-color:  #a7a75e;
+  color:#000000;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; 
+ }
+
+ .card-dark {
+  display: flex;
+  background-color:  #444443;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;   
 }
 
 .card:hover{
@@ -92,6 +205,10 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+.img-card{
+  width: 100%;
+  border-radius: 100px 100px 100px 100px;
 }
 
 table {
@@ -113,10 +230,35 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: #12121296;
-  color: white;
+/*Important*/
+
+.img-card{
+  width: 100%;
+  border-radius: 100px 100px 100px 100px;
 }
-.dark > a {
-  color: white;
+
+.button-ligth {
+  background-color:  #000000;
+  border: none;
+  color: #a7a75e;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.button-dark {
+  background-color:  #FFFFFF;
+  border: none;
+  color: #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
 }
